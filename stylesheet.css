@@ -1,0 +1,37 @@
+/* HTMLをCSSで装飾 */
+
+.title {
+    color: #02ccba;
+  }
+
+  .btn {
+    border-radius: 5px;
+    background-color: lightblue;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+  }
+
+  /* 画像の位置、下記をコメントアウトすると左揃えで並ぶ */
+
+  /*
+  .class1 {
+    text-align: left
+  }
+   
+  .class2 {
+    text-align: center;
+  }
+   
+  .class3 {
+    text-align: right;
+  }
+
+  */
+
+  .yokonarabi{
+    display:flex;
+}
+.yokonarabi>div{
+    width:50%;
+}
