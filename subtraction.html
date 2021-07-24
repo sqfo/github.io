@@ -1,0 +1,61 @@
+<!-- メイン画面で配置したボタンが押されたときに表示される画面 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+
+  <title>BrythonでBMIを計算する</title>
+  <meta charset="utf-8">
+  <script src="static/brython.js"></script>
+  <script src="static/brython_stdlib.js"></script> 
+
+</head>
+<body>
+  <h1>1～10までの「たしざん」をしましょう(^Θ^)</h1>
+
+  <label for="name1" id="nnn">社員番号を下記に入力して下さい。</label>
+  <!-- １つ目の数字をいれる入れ物 -->
+  <input type="text" id="num1" />
+
+  <input type="button" value="合計を表示" onclick="sum()" />
+
+    <br><br>
+    <div id="result"></div>
+
+  <!-- 戻るボタンを配置 -->
+  <input type="button" onclick="history.back()" value="戻る">
+
+</body>
+
+<body onload="ransu1();"></body>
+
+<script type="text/javascript">
+  //<![CDATA[
+  function sum(){
+    //1つ目の数字を取得して箱（変数）に入れる（代入）
+    var num1 = document.getElementById('num1').value;
+
+  }
+
+  function ransu1(){
+    var rand01 = Math.floor(Math.random() * 10) + 1
+
+    var rand02 = Math.floor(Math.random() * 10) + 1
+
+    if (rand01 + rand02 > 10) {
+
+      ransu1();
+
+    } else {
+
+      var moji = String(rand01) + '+' + String(rand02) + '='
+
+      document.getElementById('nnn').innerText = moji
+    }
+  }
+  //]]>
+  </script>
+
+</html>
