@@ -12,6 +12,15 @@
     color: white;
   }
 
+  .subtraction {
+    border-radius: 5px;
+    background-color: lightblue;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+
+  }
+
   /* 画像の位置、下記をコメントアウトすると左揃えで並ぶ */
 
   /*
