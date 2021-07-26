@@ -6,7 +6,7 @@
 
   .btn {
     border-radius: 5px;
-    background-color: lightblue;
+    background-color: rgb(132, 144, 148);
     padding: 10px;
     text-decoration: none;
     color: white;
@@ -19,6 +19,33 @@
     text-decoration: none;
     color: white;
 
+  }
+
+  .kotae_color {
+    color: red;
+  }
+
+  main {
+    display: flex;
+  }
+
+  .midashi {
+    font-size: 6px;
+    color: rgb(224, 134, 252);
+  }
+
+  .aaa{
+    font-size: 15px;
+    color:#FF99CC;
+  }
+
+  .bbb{
+    font-size: 15px;
+    color:#a19fa1;
+  }
+
+  .ccc{
+    color:white;
   }
 
   /* 画像の位置、下記をコメントアウトすると左揃えで並ぶ */
