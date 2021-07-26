@@ -5,7 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
-
+  <link rel="stylesheet" href="stylesheet.css">
   <title>BrythonでBMIを計算する</title>
   <meta charset="utf-8">
   <script src="static/brython.js"></script>
@@ -13,17 +13,29 @@
 
 </head>
 <body>
-  <h1>1～10までの「たしざん」をしましょう(^Θ^)</h1>
+  <h1 class="midashi">ひきざん もんだい　(^Θ^)</h1>
+  <h1 class="midashi">いくつ できるかな?</h1>
+  <br>
 
-  <label for="name1" id="nnn">社員番号を下記に入力して下さい。</label>
+  <!-- 問題を表示するラベル -->
+  <label for="name1" id="nnn" class="bbb">社員番号を下記に入力して下さい。</label>
+
+  <!-- =を表示するラベル -->
+  <label for="name2" id="uuu" class="bbb">=</label>
+
   <!-- １つ目の数字をいれる入れ物 -->
-  <input type="text" id="num1" />
+  <input type="text" id="num1" onInput="kakunin()" size="1"/>
 
-  <input type="button" value="合計を表示" onclick="sum()" />
+  <div id="mmm" class="ccc"></div>
 
-    <br><br>
-    <div id="result"></div>
+  <main> <!-- 横並びのレイアウトに変更 -->
+  <div id="correct_answer_count" class="aaa">0</div>
 
+  <div id="correct_answer" class="aaa">もん せいかい!!★</div>
+
+  </main>
+
+  <br>
   <!-- 戻るボタンを配置 -->
   <input type="button" onclick="history.back()" value="戻る">
 
@@ -44,16 +56,46 @@
 
     var rand02 = Math.floor(Math.random() * 10) + 1
 
-    if (rand01 + rand02 > 10) {
+    if (rand01 - rand02 > 10) {
 
+      ransu1();
+
+    }else if (rand01<rand02){
+
+      ransu1();
+    
+    } else {
+
+      var moji = String(rand01) + ' - ' + String(rand02)
+
+      document.getElementById('nnn').innerText = moji
+
+      document.getElementById('mmm').innerText = rand01 - rand02
+
+    }
+  }
+
+  function kakunin(){
+    var message = document.getElementById('num1').value;
+
+    var mes = (document.getElementById('mmm').innerText)
+
+    if (message===mes){
+
+      document.getElementById('num1').value=""
+
+      var count = Number(document.getElementById('correct_answer_count').innerText);
+
+      Number(count +=1);
+      document.getElementById('correct_answer_count').innerText= count
+      
       ransu1();
 
     } else {
 
-      var moji = String(rand01) + '+' + String(rand02) + '='
-
-      document.getElementById('nnn').innerText = moji
     }
+
+
   }
   //]]>
   </script>
