@@ -76,13 +76,14 @@
   }
 
   function kakunin(){
-    var message = document.getElementById('num1').value;
+    var textBox = document.getElementById('num1')
+    var message = textBox.value;
 
     var mes = (document.getElementById('mmm').innerText)
 
     if (message===mes){
 
-      document.getElementById('num1').innerText='';
+      textBox.value='';
 
       var count = Number(document.getElementById('correct_answer_count').innerText);
 
