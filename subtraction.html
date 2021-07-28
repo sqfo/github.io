@@ -17,32 +17,33 @@
 
 </head>
 <body>
-  <h1 class="midashi">ひきざん もんだい　(^Θ^)</h1>
-  <h1 class="midashi">いくつ できるかな?</h1>
-  <br>
+  <div class="container">
+    <h1 class="midashi">ひきざん もんだい　(^Θ^)</h1>
+    <h1 class="midashi">いくつ できるかな?</h1>
+    <br>
 
-  <!-- 問題を表示するラベル -->
-  <label for="name1" id="nnn" class="bbb">社員番号を下記に入力して下さい。</label>
+    <!-- 問題を表示するラベル -->
+    <label for="name1" id="nnn" class="bbb">社員番号を下記に入力して下さい。</label>
 
-  <!-- =を表示するラベル -->
-  <label for="name2" id="uuu" class="bbb">=</label>
+    <!-- =を表示するラベル -->
+    <label for="name2" id="uuu" class="bbb">=</label>
 
-  <!-- １つ目の数字をいれる入れ物 -->
-  <input type="number" id="num1" autocomplete="off" onInput="kakunin()" size="5"/>
+    <!-- １つ目の数字をいれる入れ物 -->
+    <input type="number" id="num1" autocomplete="off" onInput="kakunin()" size="5"/>
 
-  <div id="mmm" class="ccc"></div>
+    <div id="mmm" class="ccc"></div>
 
-  <main> <!-- 横並びのレイアウトに変更 -->
-  <div id="correct_answer_count" class="aaa">0</div>
+    <main> <!-- 横並びのレイアウトに変更 -->
+    <div id="correct_answer_count" class="aaa">0</div>
 
-  <div id="correct_answer" class="aaa">もん せいかい!!★</div>
+    <div id="correct_answer" class="aaa">もん せいかい!!★</div>
 
-  </main>
+    </main>
 
-  <br>
-  <!-- 戻るボタンを配置 -->
-  <input type="button" onclick="history.back()" value="戻る">
-
+    <br>
+    <!-- 戻るボタンを配置 -->
+    <input type="button" onclick="history.back()" value="戻る">
+  </div>
 </body>
 
 <body onload="ransu1();"></body>
